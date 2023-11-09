@@ -3,8 +3,6 @@
     padding:0%;
 }
 body{
-    background-color:#blue;
-    }
     .cabecalho{
     background-color:aqua;
     display:flex
@@ -12,4 +10,5 @@ body{
     align-items:center
     font-size:15px
     }
+}
 
