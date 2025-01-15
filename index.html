@@ -9,7 +9,7 @@
         body {
             display: flex;
             justify-content: center;
-            align-items: center;
+            align-items: flex-start; /* Alinhar ao topo inicialmente */
             height: 100vh;
             margin: 0;
             background: url(https://raw.githubusercontent.com/raick0/Contador-de-Namoro/main/20241114_205733_0000.png) center/cover no-repeat;
@@ -24,6 +24,7 @@
             padding: 15px 25px; /* Reduzindo o espaçamento interno */
             border-radius: 8px;
             max-width: 250px; /* Diminuindo a largura máxima */
+            margin-top: 150px; /* Espaçamento superior para mover a caixa para baixo */
         }
 
         /* Estilos do título */
@@ -68,7 +69,7 @@
     <!-- Estrutura do site -->
     <div class="container">
         <!-- Texto inicial -->
-        <h1>Estamos juntos há:</h1>
+        <h1>estamos juntos há:</h1>
 
         <!-- Contador de dias, horas, minutos e segundos -->
         <div id="contador">
