@@ -1,14 +1,48 @@
-*{
-    margin:0%;
-    padding:0%;
-}
-body{
-    .cabecalho{
-    background-color:aqua;
-    display:flex
-    justify-content: center;
-    align-items:center
-    font-size:15px
-    }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    height: 100vh;
+    overflow: hidden;
+    text-align: center;
+}
+
+header {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.photo {
+    width: 1920px;
+    height: 1080px;
+    background: #fff url('minha-imagem.jpeg') no-repeat center/cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+.counter {
+    font-size: 1.5rem;
+    color: #fff;
+    font-weight: 600;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+footer {
+    position: absolute;
+    bottom: 10px;
+    font-size: 1rem;
+    color: #fff;
+    opacity: 0.8;
+}

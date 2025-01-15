@@ -1,17 +1,40 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LojasMengo</title>
-    <link rel="stylerheet"href="style.css">
+    <title>Minha Homenagem para Você</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<header class="cabecalho">
-<h1>2° série A</h1>
-<p> A turma mais</p>
-<strong>icônica</strong>
-Do cecilia
-</header>
+    <header>
+        Eu te amo!
+    </header>
+    <div class="photo"></div>
+    <div class="counter" id="counter">
+        Tempo desde que começamos a namorar: <span id="time"></span>
+    </div>
+    <footer>
+        Feito com ❤️ por mim.
+    </footer>
+
+    <script>
+        const startDate = new Date('2024-08-16T00:00:00'); // Substitua pela data de início do namoro
+
+        function updateCounter() {
+            const now = new Date();
+            const elapsed = now - startDate;
+
+            const days = Math.floor(elapsed / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((elapsed / (1000 * 60 * 60)) % 24);
+            const minutes = Math.floor((elapsed / (1000 * 60)) % 60);
+            const seconds = Math.floor((elapsed / 1000) % 60);
+
+            document.getElementById('time').innerText = `${days} dias, ${hours} horas, ${minutes} minutos e ${seconds} segundos`;
+        }
+
+        setInterval(updateCounter, 1000);
+    </script>
 </body>
+</html>
     
