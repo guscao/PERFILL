@@ -22,12 +22,13 @@ header {
     color: #fff;
     margin-bottom: 20px;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    text-align: center;
 }
 
 .photo {
     width: 1920px;
     height: 1080px;
-    background: #fff url('minha-imagem.jpeg') no-repeat center/cover;
+    background: #fff url('Sem\ título.jpeg') no-repeat center/cover;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     margin-bottom: 20px;
 }
@@ -37,6 +38,7 @@ header {
     color: #fff;
     font-weight: 600;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    text-align: center;
 }
 
 footer {
@@ -45,4 +47,5 @@ footer {
     font-size: 1rem;
     color: #fff;
     opacity: 0.8;
+    text-align: center;
 }
