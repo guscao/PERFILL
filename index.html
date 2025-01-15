@@ -1,132 +1,21 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contador de Dias de Namoro</title>
-    <style>
-        /* Fundo com a imagem do papel kraft */
-        body {
-            display: flex;
-            flex-direction: column;
-            align-items: center; /* Centralizar o conteúdo horizontalmente */
-            justify-content: flex-start; /* Alinhar ao topo */
-            height: 100vh;
-            margin: 0;
-            background: url(https://raw.githubusercontent.com/raick0/Contador-de-Namoro/main/20241114_205733_0000.png) center/cover no-repeat;
-            font-family: 'Courier New', cursive;
-            color: #6b4226; /* Cor do texto para combinar com o visual */
-        }
-
-        /* Estilos para a imagem */
-        .image-container img {
-            max-width: 100%; /* Ajusta o tamanho da imagem para caber na largura da tela */
-            max-height: 100px; /* Limita a altura máxima da imagem */
-            border-radius: 10px; /* Bordas arredondadas para um visual mais elegante */
-            margin-top: 10px; /* Espaçamento entre o topo e a imagem */
-            background: #fff url('minha-imagem.') no-repeat center/cover;
-            box-shadow: 0 8px 4px rgba(150, 150, 150, 0.2); /* Adiciona sombra à imagem */
-        }
-
-        /* Caixa de texto central */
-        .container {
-            text-align: center;
-            background-color: rgba(255, 255, 255, 0.5); /* Fundo levemente transparente */
-            padding: 15px 25px; /* Reduzindo o espaçamento interno */
-            border-radius: 8px;
-            max-width: 250px; /* Diminuindo a largura máxima */
-            margin-top: 250px; /* Espaçamento entre a imagem e a caixa do contador */
-        }
-
-        /* Estilos do título */
-        h1 {
-            font-size: 1.5em;
-            margin-bottom: 20px;
-        }
-
-        /* Estilos do contador */
-        #contador {
-            font-size: 1.3em;
-            line-height: 1.6em;
-        }
-
-        /* Layout para os contadores de tempo */
-        .linha {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            margin-top: 5px;
-        }
-
-        /* Estilos para centralizar unidades em linha individual */
-        .linha-unica {
-            display: block;
-            margin-top: 5px;
-        }
-
-        /* Impede quebra entre números e unidades */
-        .time-unit {
-            white-space: nowrap;
-        }
-
-        /* Texto de rodapé */
-        .footer {
-            margin-top: 20px;
-            font-size: 1em;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contador de Namoro</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Estrutura do site -->
-
-    <!-- Imagem acima do contador -->
-    <div class="image-container">
-        <img src="https://via.placeholder.com/300x200" alt="Imagem de destaque">
+  <div class="container">
+    <div class="content">
+      <img src="minha-imagem.jpeg" alt="Yasmin e Gustavo" class="photo">
+      <div class="info">
+        <h1>Juntos</h1>
+        <p id="counter"></p>
+      </div>
     </div>
-
-    <div class="container">
-        <!-- Texto inicial -->
-        <h1>estamos juntos há:</h1>
-
-        <!-- Contador de dias, horas, minutos e segundos -->
-        <div id="contador">
-            <div class="linha">
-                <span class="time-unit" id="dias">XX dias,</span>
-                <span class="time-unit" id="horas">XX horas,</span>
-            </div>
-            <div class="linha-unica">
-                <span class="time-unit" id="minutos">XX minutos e</span>
-            </div>
-            <div class="linha-unica">
-                <span class="time-unit" id="segundos">XX segundos</span>
-            </div>
-        </div>
-
-        <!-- Texto "te amo" -->
-        <div class="footer">te amo ♡</div>
-    </div>
-
-    <script>
-        // Coloque a data de início do namoro aqui
-        const dataInicio = new Date('2023-12-25T18:00:00');
-
-        function atualizarContador() {
-            const agora = new Date();
-            const diferencaTempo = agora - dataInicio;
-
-            const dias = Math.floor(diferencaTempo / (1000 * 60 * 60 * 24));
-            const horas = Math.floor((diferencaTempo % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutos = Math.floor((diferencaTempo % (1000 * 60 * 60)) / (1000 * 60));
-            const segundos = Math.floor((diferencaTempo % (1000 * 60)) / 1000);
-
-            document.getElementById('dias').innerText = `${dias} dias,`;
-            document.getElementById('horas').innerText = `${horas} horas,`;
-            document.getElementById('minutos').innerText = `${minutos} minutos e`;
-            document.getElementById('segundos').innerText = `${segundos} segundos`;
-        }
-
-        atualizarContador();
-        setInterval(atualizarContador, 1000);
-    </script>
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>
