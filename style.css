@@ -26,8 +26,8 @@ header {
 }
 
 .photo {
-    width: 1920px;
-    height: 1080px;
+    width: 3120px;
+    height: 4160px;
     background: #fff url('Sem\ título.jpeg') no-repeat center/cover;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     margin-bottom: 20px;
